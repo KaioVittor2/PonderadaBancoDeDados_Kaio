@@ -3,6 +3,39 @@
 Banco de dados:
 
 ![alt text](assets/Tabela_foto.png)
+
+Explicação da tabela: 
+
+**Tabela 'users'**
+- Armazena informações sobre os usuários do sistema.
+- Cada registro representa um usuário e contém detalhes como nome, idade, gênero, email, senha, localização, entre outros.
+- O campo "id" é a chave primária.
+- O campo "followers" armazena o número de seguidores que o usuário possui.
+
+**Tabela 'posts'**
+- Responsável por armazenar as postagens feitas pelos usuários.
+- Cada registro corresponde a uma postagem e inclui informações como o conteúdo da postagem, número de curtidas e uma referência ao usuário que fez a postagem.
+- O campo "id_users" é uma chave estrangeira que relaciona cada postagem ao usuário que a fez.
+
+**Tabela 'preferences'**
+- Registra as preferências de cada usuário em relação a determinadas ações e público-alvo.
+- Cada registro associa um usuário a uma preferência específica, representada pelo campo "id_actions_and_target_public".
+
+**Tabela 'actions_and_target_public'**
+- Contém uma lista de ações possíveis e públicos-alvo para as preferências dos usuários.
+- Cada registro define uma ação e o público-alvo associado a essa ação.
+
+**Tabela 'posts_actions_and_target_public'**
+- Estabelece a relação entre postagens, ações e público-alvo.
+- Registra quais ações foram realizadas em cada postagem e qual público-alvo está associado a essas ações.
+
+**Tabela 'Friends_view'**
+- Mantém uma visualização das interações entre usuários e suas postagens.
+- Cada registro representa uma interação entre um usuário e uma postagem,
+  como uma visualização de amigo.
+- As chaves estrangeiras "id_users" e "id_Posts" relacionam o usuário e a postagem envolvidos na interação.
+
+
 <br><br>
 Código SQL
 <br><br>
